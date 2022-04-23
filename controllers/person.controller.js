@@ -3,7 +3,7 @@ const Person = require("../models/Person");
 
 const PersonController = {
     async listar(req, res){
-        const people = await Person.findAll({limit: 100});
+        const people = await Person.findAll();
         res.json(people);
     },
     async atualizar(req, res) {
